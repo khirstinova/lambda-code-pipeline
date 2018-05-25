@@ -9,4 +9,10 @@ exports.handler = function (event, context, callback) {
     }, function (err, data) {
         console.log("Data: " + data);
     });
-}
+};
+
+module.exports = {
+    failFunction: function() {
+        return -1;  
+    }    
+};

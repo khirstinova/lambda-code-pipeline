@@ -16,6 +16,12 @@ describe('index', function() {
       });
     });
   });
+  
+  describe('fail()', function() {
+    it('should fail', function() {
+        assert.equal(index.failFunction(), 0);
+    });
+  });
 });
 
 
