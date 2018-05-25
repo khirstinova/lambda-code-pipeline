@@ -3,8 +3,16 @@ phases:
   install:
     commands:
       - npm install time
+      - npm install aws-sdk-mock
+      - npm install -g mocha
       - aws cloudformation package --template-file samTemplate.yaml --s3-bucket sample-lambda-code-pipeline-builds 
                                    --output-template-file outputSamTemplate.yaml
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Testing the Node.js code
+      - mocha
+      
 artifacts:
   type: zip
   files:
