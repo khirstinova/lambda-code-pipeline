@@ -11,8 +11,7 @@ exports.handler = function (event, context, callback) {
     });
 };
 
-module.exports = {
-    failFunction: function() {
-        return -1;  
-    }    
+module.exports.failFunction = 
+function() {
+    return -1;  
 };
